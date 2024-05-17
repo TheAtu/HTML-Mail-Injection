@@ -19,11 +19,13 @@ body {
     align-items: center;
     height: 100vh;
     padding: 1rem;
+    text-align: center;
+
 }
 
 .dropzone-box {
     border-radius: 2rem;
-    padding: 2rem;
+    padding: 1rem 2rem  0 2rem;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     display: flex;
     justify-content: center;
@@ -40,7 +42,7 @@ body {
 }
 
 .dropzone-box h2 {
-    font-size: 1.3rem;
+    font-size: 1.125rem;
     margin-top: 0.6rem;
 
 }
@@ -103,7 +105,7 @@ body {
 }
 
 .top-bar {
-    padding-top: 1rem;
+    padding-top: 0.675rem;
     margin-top: 1rem;
     border-top: 1px solid var(--gray);
 }
@@ -118,26 +120,26 @@ body {
     text-decoration: underline;
 }
 
-.dropzone-actions button[type='reset'] {
+.dropzone-actions button.btn-light {
     background-color: transparent;
     border: 1px solid var(--gray);
     border-radius: 0.5rem;
-    padding: 0.5rem 1rem;
+    padding: 0.15rem 1rem;
     color: var(--primary);
     cursor: pointer;
 }
 
-.dropzone-actions button[type='submit'] {
+.dropzone-actions button.btn-dark {
     background-color: var(--primary);
     border: 1px solid var(--primary);
     border-radius: 0.5rem;
-    padding: 0.5rem 1rem;
+    padding: 0.1rem 1rem;
     color: var(--white);
     cursor: pointer;
 }
 
 .links{
-   margin:0;
+   margin: 0.75rem;
    padding: 0;
    text-indent: 0;
    list-style: none;

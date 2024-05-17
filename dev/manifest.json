@@ -1,10 +1,11 @@
 {
-    "update_url": "https://clients2.google.com/service/update2/crx", 
+    "update_url": "https://github.com/TheAtu/HTML-Mail-Injection/raw/main/builds/last%20stable%20build/HTML-Email-Injection.crx", 
     
       "manifest_version": 3,
-      "name": "Final Extension - 1.0",
-      "version": "1.0",
+      "name": "HTML Email Insert",
+      "version": "2.0",
       "description": "Inject HTML into a Mail's compose message area to send HTML email templates.",
+      "author": "TheAtu <alfonsundblad@gmail.com>",
       "permissions": [
         "scripting",
         "activeTab",

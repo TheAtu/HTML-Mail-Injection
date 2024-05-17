@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
     <script src="https://kit.fontawesome.com/5052ee0441.js" crossorigin="anonymous"></script>
 </head>
-<body style="width: 532px; padding: 1rem">
+<body style="height:600px; width: 532px; padding: 1rem">
 
     <form class="dropzone-box">
         <h1>Load your HTML Email Template</h1>
@@ -36,26 +36,26 @@
                 </svg>
             </div>
             <p>Click to upload or drag and drop</p>
-            <input type="file" required id="upload-file" name="uploaded-file">
+            <input type="file" required id="upload-file" name="uploaded-file" accept=".html">
             <p class="message">No Files Selected</p>
         </div>
 
 
         <div class="dropzone-actions">
-            <button type="reset">
+            <button class="btn-light" type="reset">
                 Cancel
             </button>
-            <button id="insert-button" type="submit">
+            <button class="btn-dark" id="insert-button" type="submit">
                 Insert
             </button>
         </div>
 
         <div class="dropzone-actions extra-actions top-bar">
-            <button id="preview-button">
+            <button class="btn-dark" id="preview-button" type="button">
                 <i class="material-symbols-outlined"> preview </i> Preview
             </button>
-            <button id="insert_last-button">
-                <i class="material-symbols-outlined"> replay </i> Insert Last Template <span>file</span>
+            <button class="btn-dark" id="insert_last-button" type="button">
+                <i class="material-symbols-outlined"> replay </i> Insert Last Template
         </button>
         </div>
         <ul class="links">
@@ -66,7 +66,7 @@
                 <a target="_blank" href="https://github.com/TheAtu/HTML-Mail-Injection"><i class="fa-brands fa-github"></i>  Source Code</a>
             </li>
             <li class="update-link">
-                <a target="_blank" href=""><i class="material-symbols-outlined">update</i>  Latest Version</a>
+                <a target="_blank" href="https://github.com/TheAtu/HTML-Mail-Injection/raw/main/builds/last%20stable%20build/HTML-Email-Injection.crx"><i class="material-symbols-outlined">update</i>  Latest Version</a>
             </li>
         </ul>
     </form>

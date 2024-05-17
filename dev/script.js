@@ -11,6 +11,7 @@ const dropZoneElement = inputElement.closest(".dropzone-area");
 inputElement.addEventListener("change", (e) => {
   if (inputElement.files.length) {
     updateDropzoneFileList(dropZoneElement, inputElement.files[0]);
+    document.getElementById('upload-icon').classList.add('uploaded');
   }
 });
 
@@ -31,10 +32,9 @@ dropZoneElement.addEventListener("drop", (e) => {
   if (e.dataTransfer.files.length) {
     inputElement.files = e.dataTransfer.files;
 
+    
     updateDropzoneFileList(dropZoneElement, e.dataTransfer.files[0]);
 
-    let uploadIcon = document.getElementById('upload-icon');
-    uploadIcon.classList.add('uploaded');
 
   }
 
@@ -54,6 +54,8 @@ dropzoneBox.addEventListener("reset", (e) => {
   let dropzoneFileMessage = dropZoneElement.querySelector(".message");
 
   dropzoneFileMessage.innerHTML = `No Files Selected`;
+
+  document.getElementById('upload-icon').classList.remove('uploaded');
 });
 
 dropzoneBox.addEventListener("submit", (e) => {
@@ -84,22 +86,6 @@ document.getElementById('insert_last-button').addEventListener('click', function
     });
 });
 
-// document.getElementById('insert-button').addEventListener('change', function(event) {
-//   const fileInput = event.target;
-//   const file = fileInput.files[0];
-//   if (!file) return;
-  
-//   const reader = new FileReader();
-//   reader.onload = function(e) {
-//     const htmlContent = e.target.result;
-//     triggerInjection(htmlContent)
-//     // Save the HTML content to storage
-//     chrome.storage.local.set({ 'htmlContent': htmlContent });
-//   };
-//   reader.readAsText(file);
-// });
-
-
 function triggerInjection(htmlContent){
   chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
     chrome.scripting.executeScript({
@@ -124,3 +110,22 @@ function injectHTML(htmlContent) {
       console.error("Could not find the compose message area.");
   }
 }
+
+
+
+// Add event listener for Preview button
+document.getElementById('preview-button').addEventListener('click', (e) => {
+  e.preventDefault();
+  console.log
+  const myFile = inputElement.files[0];
+  if (!myFile) return;
+
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const htmlContent = e.target.result;
+    const blob = new Blob([htmlContent], { type: 'text/html' });
+    const url = URL.createObjectURL(blob);
+    window.open(url, '_blank');
+  };
+  reader.readAsText(myFile);
+});

@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+        File Dropzone
+    </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <script src="https://kit.fontawesome.com/5052ee0441.js" crossorigin="anonymous"></script>
+</head>
+<body style="width: 532px; padding: 1rem">
+
+    <form class="dropzone-box">
+        <h1>Load your HTML Email Template</h1>
+        <p>
+            This extension allows you to inject responsive HTML into your email sertvice's compose message area.
+        </p>
+        <h2 class="top-bar">Upload and attach files</h2>
+        <p class="small-description">Click to upload or drag and drop</p>
+
+        <div class="dropzone-area">
+            <div id="upload-icon" class="file-upload-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path stroke="currentColor" d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+                    <path stroke="currentColor" d="M14 3v4a1 1 0 0 0 1 1h4" />
+                </svg>
+            </div>
+            <p>Click to upload or drag and drop</p>
+            <input type="file" required id="upload-file" name="uploaded-file">
+            <p class="message">No Files Selected</p>
+        </div>
+
+
+        <div class="dropzone-actions">
+            <button type="reset">
+                Cancel
+            </button>
+            <button id="insert-button" type="submit">
+                Insert
+            </button>
+        </div>
+
+        <div class="dropzone-actions extra-actions top-bar">
+            <button id="preview-button">
+                <i class="material-symbols-outlined"> preview </i> Preview
+            </button>
+            <button id="insert_last-button">
+                <i class="material-symbols-outlined"> replay </i> Insert Last Template <span>file</span>
+        </button>
+        </div>
+        <ul class="links">
+            <li class="linkedin-link">
+                <a target="_blank" href="https://www.linkedin.com/in/alfonsosundblad/"><i class="fa-brands fa-linkedin"></i>  LinkedIn</a>
+            </li>
+            <li class="github-link">
+                <a target="_blank" href="https://github.com/TheAtu/HTML-Mail-Injection"><i class="fa-brands fa-github"></i>  Source Code</a>
+            </li>
+            <li class="update-link">
+                <a target="_blank" href=""><i class="material-symbols-outlined">update</i>  Latest Version</a>
+            </li>
+        </ul>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
